@@ -17,16 +17,9 @@ module tt_um_MUX (
 );
 
   
-  assign uio_oe  = 1;
-
-    always @(*) beigin
-        if (uio_in[7] == uio_oe[7]) begin
-            uio_out[6:0] = uio_in[6:0];
-        end else begin
-            uio_out[6:0] = uio_oe[6:0];
-        end
-        uio_out[7] = 1
-    end
+  assign uio_oe  = 255;
+  assign uio_out[6:0] = (uio_in[7] == uio_oe[7]) ? uio_in[6:0] : uio_oe[6:0];
+    assign uio_out [7] = 1;
                             
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
