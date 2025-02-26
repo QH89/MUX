@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
   title:        "MUX"      # Project title
-  author:       ""      # Your name
+  author:       "Hui Qiao, Jacqueline Wang"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  description:  "A MUX with two 7-bits inputs A[7:0] and B[7:0]. It out puts C[6:0] = A[6:0] if A[7] = B[7]. Other wise it out puts C[6:0] = B[6:0]. C[7:0] is set to 1."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
