@@ -17,8 +17,9 @@ module tt_um_MUX (
 );
 
   
-  assign uio_oe  = 255;
-    assign uo_out[6:0] = (ui_in[7] == uio_oe[7]) ? ui_in[6:0] : uio_oe[6:0];
+    assign uio_oe  = 0;
+    assign uio_out = 0;
+    assign uo_out[6:0] = (ui_in[7] == uio_in[7]) ? ui_in[6:0] : uio_in[6:0];
     assign uo_out [7] = 1;
                             
   // List all unused inputs to prevent warnings
